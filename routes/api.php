@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ContactController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +26,7 @@ Route::post('register',[UserController::class,'register']);
 Route::post('login',[UserController::class,'login']);
 Route::post('addproduct',[ProductController::class,'addProduct']);
 Route::get('list',[ProductController::class,'list']);
+Route::delete('delete/{id}',[ProductController::class,'delete']);
+Route::get('product/{id}',[ProductController::class,'getProduct']);
+Route::post('contact',[ContactController::class,'contact']);
+Route::put('update/{id?}',[ProductController::class,'updateProducts']);
