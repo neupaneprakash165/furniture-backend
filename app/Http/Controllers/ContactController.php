@@ -18,4 +18,10 @@ class ContactController extends Controller
 
         return $contact;
     }
+    // Function to retrieve list of contacts
+    function contactlist()
+    {
+        $contacts = Contact::all(); // Retrieve all contacts from the database
+        return response()->json($contacts);
+    }
 }

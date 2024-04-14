@@ -29,4 +29,5 @@ Route::get('list',[ProductController::class,'list']);
 Route::delete('delete/{id}',[ProductController::class,'delete']);
 Route::get('product/{id}',[ProductController::class,'getProduct']);
 Route::post('contact',[ContactController::class,'contact']);
-Route::put('update/{id?}',[ProductController::class,'updateProducts']);
+Route::post('update/{id?}',[ProductController::class,'updateProducts']);
+Route::get('/contacts', [ContactController::class, 'contactlist']);
